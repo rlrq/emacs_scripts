@@ -16,7 +16,7 @@
     (modify-syntax-entry ?/ ". 12" st)
     ;; (modify-syntax-entry ?/ ". 12 4b" st)
     ;; (modify-syntax-entry ?* ". 23" st)
-    (modify-syntax-entry ?# "<" st)
+    ;; (modify-syntax-entry ?# "<" st)
     (modify-syntax-entry ?\n ">" st)
     st)
   "Syntax table for `eidos-mode'.")
@@ -61,7 +61,8 @@
 (defconst eidos-font-lock-keywords-2
   (append eidos-font-lock-keywords-1
           (list
-           '("\\<\\(a\\(?:bs\\|cos\\|ll\\|ny\\|pply\\|rray\\|s\\(?:Float\\|Integer\\|Logical\\|String\\|in\\)\\|tan2?\\)\\|beep\\|c\\(?:atn?\\|bind\\|eil\\|itation\\|lock\\|mColors\\|o\\(?:lor2rgb\\|[rsv]\\)\\|reateDirectory\\|um\\(?:Product\\|Sum\\)\\)\\|d\\(?:ate\\|e\\(?:fine\\(?:Constant\\|Global\\)\\|leteFile\\)\\|im\\|mvnorm\\|norm\\|oCall\\|rop\\)\\|e\\(?:lementType\\|x\\(?:ecuteLambda\\|ists\\|p\\)\\)\\|f\\(?:i\\(?:lesAtPath\\|tness\\)\\|lo\\(?:at\\|or\\)\\|ormat\\|unctionSignature\\)\\|get\\(?:\\(?:See\\|w\\)d\\)\\|h\\(?:eatColors\\|sv2rgb\\)\\|i\\(?:dentical\\|felse\\|n\\(?:itialize\\(?:Gen\\(?:eConversion\\|omicElement\\(?:Type\\)?\\)\\|InteractionType\\|Mutation\\(?:\\(?:Rat\\|Typ\\)e\\)\\|RecombinationRate\\|S\\(?:LiMOptions\\|ex\\)\\|TreeSeq\\)?\\|te\\(?:ger\\(?:Dev\\|Mod\\)?\\|raction\\)\\)\\|s\\(?:F\\(?:inite\\|loat\\)\\|In\\(?:finite\\|teger\\)\\|Logical\\|N\\(?:AN\\|ULL\\)\\|Object\\|String\\)\\)\\|l\\(?:ength\\|icense\\|og\\(?:10\\|2\\|ical\\)?\\|s\\)\\|m\\(?:a\\(?:t\\(?:ch\\|eChoice\\|rix\\(?:Mult\\)?\\)\\|x\\)\\|e\\(?:an\\|thodSignature\\)\\|in\\)\\|n\\(?:c\\(?:har\\|ol\\)\\|row\\)\\|o\\(?:bject\\|rder\\)\\|p\\(?:aste0?\\|m\\(?:ax\\|in\\)\\|r\\(?:int\\|o\\(?:duct\\|pertySignature\\)\\)\\)\\|r\\(?:a\\(?:inbow\\|nge\\)\\|bin\\(?:d\\|om\\)\\|cauchy\\|dunif\\|e\\(?:adFile\\|combination\\|p\\(?:Each\\|roduction\\)\\|xp\\|[pv]\\)\\|g\\(?:amma\\|b2\\(?:color\\|hsv\\)\\|eom\\)\\|lnorm\\|m\\(?:vnorm\\)?\\|norm\\|ound\\|pois\\|unif\\|weibull\\)\\|s\\(?:a\\(?:mple\\|pply\\)\\|d\\|e\\(?:q\\(?:Along\\|Len\\)?\\|t\\(?:Difference\\|Intersection\\|S\\(?:eed\\|ymmetricDifference\\)\\|Union\\|wd\\)\\)\\|i\\(?:n\\|ze\\)\\|o\\(?:rt\\(?:By\\)?\\|urce\\)\\|qrt\\|t\\(?:op\\|r\\(?:ing\\|split\\)?\\)\\|u\\(?:bstr\\|m\\(?:Exacttan\\)?\\|ppressWarnings\\)\\|ystem\\)\\|t\\(?:errainColors\\|ime\\|runc\\|test\\|ype\\)\\|u\\(?:\\(?:niqu\\|sag\\)e\\)\\|v\\(?:ar\\|ersion\\)\\|w\\(?:hich\\(?:M\\(?:ax\\|in\\)\\)?\\|rite\\(?:\\(?:Temp\\)?File\\)\\)\\|[ct]\\)\\>" . font-lock-function-name-face)))
+           '("\\<\\(a\\(?:bs\\|cos\\|ll\\|ny\\|pply\\|rray\\|s\\(?:Float\\|Integer\\|Logical\\|String\\|in\\)\\|tan2?\\)\\|beep\\|c\\(?:atn?\\|bind\\|eil\\|itation\\|lock\\|mColors\\|o\\(?:lor2rgb\\|[rsv]\\)\\|reateDirectory\\|um\\(?:Product\\|Sum\\)\\)\\|d\\(?:ate\\|e\\(?:fine\\(?:Constant\\|Global\\)\\|leteFile\\)\\|im\\|mvnorm\\|norm\\|oCall\\|rop\\)\\|e\\(?:lementType\\|x\\(?:ecuteLambda\\|ists\\|p\\)\\)\\|f\\(?:i\\(?:lesAtPath\\|tness\\)\\|lo\\(?:at\\|or\\)\\|ormat\\|unctionSignature\\)\\|get\\(?:\\(?:See\\|w\\)d\\)\\|h\\(?:eatColors\\|sv2rgb\\)\\|i\\(?:dentical\\|felse\\|n\\(?:itialize\\(?:Gen\\(?:eConversion\\|omicElement\\(?:Type\\)?\\)\\|InteractionType\\|Mutation\\(?:\\(?:Rat\\|Typ\\)e\\)\\|RecombinationRate\\|S\\(?:LiMOptions\\|ex\\)\\|TreeSeq\\)?\\|te\\(?:ger\\(?:Dev\\|Mod\\)?\\|raction\\)\\)\\|s\\(?:F\\(?:inite\\|loat\\)\\|In\\(?:finite\\|teger\\)\\|Logical\\|N\\(?:AN\\|ULL\\)\\|Object\\|String\\)\\)\\|l\\(?:ength\\|icense\\|og\\(?:10\\|2\\|ical\\)?\\|s\\)\\|m\\(?:a\\(?:t\\(?:ch\\|eChoice\\|rix\\(?:Mult\\)?\\)\\|x\\)\\|e\\(?:an\\|thodSignature\\)\\|in\\)\\|n\\(?:c\\(?:har\\|ol\\)\\|row\\)\\|o\\(?:bject\\|rder\\)\\|p\\(?:aste0?\\|m\\(?:ax\\|in\\)\\|r\\(?:int\\|o\\(?:duct\\|pertySignature\\)\\)\\)\\|r\\(?:a\\(?:inbow\\|nge\\)\\|bin\\(?:d\\|om\\)\\|cauchy\\|dunif\\|e\\(?:adFile\\|combination\\|p\\(?:Each\\|roduction\\)\\|xp\\|[pv]\\)\\|g\\(?:amma\\|b2\\(?:color\\|hsv\\)\\|eom\\)\\|lnorm\\|m\\(?:vnorm\\)?\\|norm\\|ound\\|pois\\|unif\\|weibull\\)\\|s\\(?:a\\(?:mple\\|pply\\)\\|d\\|e\\(?:q\\(?:Along\\|Len\\)?\\|t\\(?:Difference\\|Intersection\\|S\\(?:eed\\|ymmetricDifference\\)\\|Union\\|wd\\)\\)\\|i\\(?:n\\|ze\\)\\|o\\(?:rt\\(?:By\\)?\\|urce\\)\\|qrt\\|t\\(?:op\\|r\\(?:ing\\|split\\)?\\)\\|u\\(?:bstr\\|m\\(?:Exacttan\\)?\\|ppressWarnings\\)\\|ystem\\)\\|t\\(?:errainColors\\|ime\\|runc\\|test\\|ype\\)\\|u\\(?:\\(?:niqu\\|sag\\)e\\)\\|v\\(?:ar\\|ersion\\)\\|w\\(?:hich\\(?:M\\(?:ax\\|in\\)\\)?\\|rite\\(?:\\(?:Temp\\)?File\\)\\)\\|[ct]\\)\\>" . font-lock-function-name-face)
+           '("\\<\\([gimps][0-9]+\\|sim\\)\\>" . font-lock-constant-face)))
   "Additional keywords (functions) to highlight in Eidos mode")
 
 (defvar eidos-font-lock-keywords eidos-font-lock-keywords-2
@@ -126,7 +127,8 @@
              ;; (setq indent-relative 1)
              (electric-indent-mode 0)
              ;; (smart-tabs-mode 1)
-             (setq indent-tabs-mode nil)
+             ;; (setq indent-tabs-mode nil)
+             (setq indent-tabs-mode t)
              (setq tab-width 4)
              (set (make-local-variable 'comment-start) "// ")
              (set (make-local-variable 'comment-end) "")
