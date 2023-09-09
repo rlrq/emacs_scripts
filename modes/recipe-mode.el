@@ -19,9 +19,9 @@
     st)
   "Syntax table for `recipe-mode'.")
 
-(defvar sample-font-lock-keywords
-  '(("function \\(\\sw+\\)" (1 font-lock-function-name-face)))
-  "Keyword highlighting specification for `recipe-mode'.")
+;; (defvar sample-font-lock-keywords
+;;   '(("function \\(\\sw+\\)" (1 font-lock-function-name-face)))
+;;   "Keyword highlighting specification for `recipe-mode'.")
 
 ;; (defvar sample-imenu-generic-expression
 ;;   ...)
@@ -71,9 +71,9 @@
 
 (add-hook 'recipe-mode-hook
           '(lambda ()
-             (electric-indent-mode 0)
-             (setq indent-tabs-mode t)
-             (setq tab-width 4)
+             ;; (electric-indent-mode 0)
+             (setq-local indent-tabs-mode t)
+             (setq-local tab-width 4)
              (set (make-local-variable 'comment-start) "// ")
              (set (make-local-variable 'comment-end) "")
              ))
